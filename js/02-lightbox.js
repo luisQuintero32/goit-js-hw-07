@@ -1,7 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-
 const galleryContainer = document.querySelector('ul.gallery');
 const photosMarkup = createGalleryItem(galleryItems);
 
@@ -24,11 +23,9 @@ function createGalleryItem(element) {
         .join('');
 };
 
-
-
 galleryContainer.insertAdjacentHTML("beforeend", photosMarkup);
 
-//Aqui usamos simplelightbox
+//simplelightbox
 
 var lightbox = new SimpleLightbox(".gallery a", {
     captionDelay: 250,

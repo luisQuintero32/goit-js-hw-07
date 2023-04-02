@@ -9,20 +9,19 @@ function createGalleryItem(element) {
         .map(({ preview, original, description }) => {
             return `
         <div class='gallery_item'>
-        <a class= "gallery__link" href="${original}">
-        <img
-        class = "gallery__image"
-        src="${preview}"
-        data-source="${original}"
-        alt="${description}"
-        />
-        </a>
+            <a class= "gallery__link" href="${original}">
+                <img
+                class = "gallery__image"
+                src="${preview}"
+                data-source="${original}"
+                alt="${description}"
+                />
+            </a>
         </div>`;
         })
 
         .join('');
 };
-
 
 const galleryHandler = (event) => {
     event.preventDefault();
@@ -47,5 +46,3 @@ const galleryHandler = (event) => {
 };
 galleryContainer.insertAdjacentHTML('beforeend', photosMarkup);
 galleryContainer.addEventListener('click', galleryHandler);
-
-
